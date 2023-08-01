@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-play: #ffb545;
+  --color-win: #00c46a;
+
+  --color-dark-1: #2d3439;
+  --color-dark-2: #42484d;
+
+  --color-light-1: #aaa;
+  --color-light-2: #f4f4f4;
+  --color-light-3: #ececec;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-light-2);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Chelsea Market", cursive;
+  color: var(--color-dark-1);
+}
+
+button {
+  all: initial;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.displayNone {
+  display: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+#startGame {
+  padding: 3rem;
+  font-size: 4rem;
+  border: 0.5rem solid var(--color-dark-1);
+  border-radius: 1rem;
+  background-color: var(--color-light-3);
+}
+
+.gameWinMessage h1 {
+  font-size: 6rem;
+}
+
+.mainBoard {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  cursor: pointer;
+}
+
+.cell {
+  border: 1px solid var(--color-dark-1);
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 10rem;
+  font-family: "Chelsea Market", cursive;
+  color: var(--color-dark-1);
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:first-child,
+.cell:nth-child(4),
+.cell:nth-child(7) {
+  border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:last-child {
+  border-right: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:last-child {
+  border-bottom: none;
+}
+
+.choice {
+  font-size: 10rem;
+}
+
+.green {
+  color: var(--color-win);
+}
+
+.play {
+  color: var(--color-play);
+}
+
+@media (max-width: 480px) {
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 3rem;
+  }
+
+  #startGame {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+
+  .gameWinMessage h1 {
+    font-size: 2rem;
+  }
+  main {
+    gap: 2rem;
+  }
+}
