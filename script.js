@@ -99,7 +99,7 @@ const updateCell = function (e) {
         gameWinMessageContent.innerHTML = `<span class='play'>${player}</span>'s turn, good luck!`
     }
 }
-
+//
 const checkDraw = function () {
     if (!options.includes('')) {
         winning()
